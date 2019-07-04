@@ -1,7 +1,8 @@
+/* eslint-disable react/prop-types */
 import React, { Component } from 'react';
 
 // 引入 ECharts 主模块
-var echarts = require('echarts/lib/echarts');
+const echarts = require('echarts/lib/echarts');
 // 引入柱状图
 require('echarts/lib/chart/bar');
 // 引入提示框和标题组件
@@ -50,10 +51,10 @@ class AcGanttChart extends Component {
       planColor = 'green',
       realColor = 'red',
       maxIntervalDay = 5,
-      right = 100,
-      left = 50,
-      bottom = 10,
-      top = 10,
+      right = 0,
+      left = 0,
+      bottom = 0,
+      top = 0,
 
 
     } = this.props;
@@ -74,6 +75,7 @@ class AcGanttChart extends Component {
       title: {
         text: title,
         padding: 20,
+        left: 30,
         textStyle: {
           fontSize: 17,
           fontWeight: 'bolder',
@@ -83,6 +85,7 @@ class AcGanttChart extends Component {
           fontSize: 13,
           fontWeight: 'bolder',
         },
+
       },
 
       toolbox: {

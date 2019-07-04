@@ -1,7 +1,7 @@
 /**
  *
- * @title 应用组件名称
- * @description 应用组件描述
+ * @title 甘特图
+ * @description 基于Echart甘特图
  *
  */
 
@@ -9,7 +9,6 @@ import React, { Component } from 'react';
 import AcGanttChart from '../../src/index';
 
 class Demo1 extends Component {
-
   barTitle = [
     '验线、交底、验料',
     '空调到场交底、验收材料、挂机、布管、打压、自检',
@@ -41,24 +40,23 @@ class Demo1 extends Component {
 
 
   render() {
-
     return (
       <div className="demoPadding">
         <AcGanttChart
-          id='gantt' // 组件id
+          id="gantt" // 组件id
           minWidthY={10} // 每天的最小宽
           minHeightX={80} // 每一组最小高
-          title={'2019年度尚层项目工期'} // 甘特图标题
+          title="2019年度尚层项目工期" // 甘特图标题
           legendTitle={['计划', '完工']}
           maxIntervalDay={5} // x轴最大刻度
           barTitle={this.barTitle} // bar 上的信息
           planDate={this.planDate} // 计划周期
-          realDate={this.realDate}  // 实际周期
+          realDate={this.realDate} // 实际周期
           right={100} // 图表左padding
-          left={50}   // 图表右padding
-          bottom={10}  // 图表下padding
-          top={50}  // 图表上padding
-          bgColor='#eceff1'  // 图表背景色
+          left={50} // 图表右padding
+          bottom={10} // 图表下padding
+          top={50} // 图表上padding
+          bgColor="#eceff1" // 图表背景色
         />
       </div>
     );
